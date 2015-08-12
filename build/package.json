@@ -1,0 +1,17 @@
+{
+  "name": "lazyreq",
+  "version": "1.0.0",
+  "description": "JS module lazy loading",
+  "main": "./main.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/sudeti/lazyreq.git"
+  },
+  "license": "mit",
+  "bugs": {
+    "url": "https://github.com/sudeti/lazyreq/issues"
+  },
+  "dependencies": {
+    "babel-runtime": "^5.8.20"
+  }
+}
