@@ -9,7 +9,6 @@ gulp.task('build', function() {
 		.pipe(newer('./build'))
 		.pipe(babel({
 			sourceMaps: 'inline',
-			optional: ['runtime'],
 		}))
 		.pipe(gulp.dest('./build'));
 });

@@ -12,6 +12,5 @@
     "url": "https://github.com/sudeti/lazyreq/issues"
   },
   "dependencies": {
-    "babel-runtime": "^5.8.20"
   }
 }
