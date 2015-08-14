@@ -1,7 +1,8 @@
 import qw from 'js-utils/qw';
-const gulp = require('gulp');
+import gulp from 'gulp';
+import lazyReq from 'lazyreq';
 
-const $ = require('lazyreq')(require, {
+const $ = lazyReq(require, {
 	newer: 'gulp-newer',
 	cached: 'gulp-cached',
 	babel: 'gulp-babel',
