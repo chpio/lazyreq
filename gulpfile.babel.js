@@ -19,7 +19,7 @@ gulp.task('build', function() {
 });
 
 gulp.task('lint', function() {
-	return gulp.src(['./src/**/*.js', './gulpfile.js'])
+	return gulp.src(['./src/**/*.js', './gulpfile.babel.js'])
 		.pipe($.cached('lint'))
 		.pipe($.eslint())
 		.pipe($.eslint.format())
