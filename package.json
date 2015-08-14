@@ -9,6 +9,8 @@
   "dependencies": {
     "babel-eslint": "^4.0.5",
     "eslint-config-airbnb-woreact": "^1.0.0",
+    "gulp-cached": "^1.1.0",
+    "gulp-eslint": "^1.0.0",
     "lazyreq": "^1.0.0"
   }
 }
