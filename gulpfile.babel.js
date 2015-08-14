@@ -1,3 +1,4 @@
+import qw from 'js-utils/qw';
 const gulp = require('gulp');
 
 const $ = require('lazyreq')(require, {
@@ -23,3 +24,7 @@ gulp.task('lint', () =>
 		.pipe($.eslint.format())
 		.pipe($.eslint.failAfterError())
 );
+
+gulp.task('watch', () => {
+	gulp.watch('./src/**/*.js', qw('build lint'));
+});
