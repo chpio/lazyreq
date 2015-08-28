@@ -49,12 +49,15 @@ it('array require', () => {
 
 it('invalid require', () => {
 	const ret = lazyReq(
-		(mod) => mod,
+		() => {
+			return {str: 'str'};
+		},
 		{
 			num: 123,
 			arrEmpty: [],
-			arrStr: [{str: 'str'}, '---nonExistent'],
+			arrStr: ['mod-name', '---nonExistent'],
 			arrObj: ['mod-name', {}],
+			arrReqObj: [{}],
 			obj: {},
 		}
 	);
@@ -63,5 +66,6 @@ it('invalid require', () => {
 	assert.throws(() => ret.arrEmpty);
 	assert.throws(() => ret.arrStr);
 	assert.throws(() => ret.arrObj);
+	assert.throws(() => ret.arrReqObj);
 	assert.throws(() => ret.obj);
 });

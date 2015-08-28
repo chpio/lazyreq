@@ -11,7 +11,11 @@ export default function lazyReq(req, modules) {
 					mod = mVal(mKey);
 				} else if (typeof mVal === 'string') {
 					mod = req(mVal);
-				} else if (Array.isArray(mVal) && 0 < mVal.length) {
+				} else if (
+					Array.isArray(mVal)
+					&& 1 <= mVal.length
+					&& typeof mVal[0] === 'string'
+				) {
 					mod = req(mVal.shift());
 
 					for (let i = 0; i < mVal.length; i += 1) {
