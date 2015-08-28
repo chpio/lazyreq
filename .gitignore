@@ -1,4 +1,6 @@
 /build/*
 !/build/package.json
 
+/coverage/
+
 /node_modules/
