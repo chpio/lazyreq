@@ -1,4 +1,4 @@
-# latyreq
+# lazyreq
 Require node modules lazily
 
 ## Install
