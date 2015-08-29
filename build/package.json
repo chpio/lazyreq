@@ -3,6 +3,12 @@
   "version": "1.0.0",
   "description": "JS module lazy loading",
   "main": "./main.js",
+	"keywords": [
+		"require",
+		"load",
+		"lazy",
+		"modules"
+	],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/sudeti/lazyreq.git"
