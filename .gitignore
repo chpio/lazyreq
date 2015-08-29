@@ -1,4 +1,7 @@
 /build/*
 !/build/package.json
+!/build/README.md
+
+/coverage/
 
 /node_modules/
