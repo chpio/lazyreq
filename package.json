@@ -1,6 +1,5 @@
 {
   "private": true,
-  "main": "./build/main.js",
   "dependencies": {
     "babel-core": "^5.8.22",
     "babel-eslint": "^4.0.5",
