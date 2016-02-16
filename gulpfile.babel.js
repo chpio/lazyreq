@@ -11,6 +11,7 @@ const $ = lazyReq(require, {
 	istanbul: 'gulp-istanbul',
 	isparta: 'isparta',
 	sourcemaps: 'gulp-sourcemaps',
+	uglify: 'gulp-uglify',
 });
 
 gulp.task('build', () =>
@@ -21,6 +22,7 @@ gulp.task('build', () =>
 			babelrc: false,
 			presets: ['es2015'],
 		}))
+		.pipe($.uglify())
 		.pipe($.sourcemaps.write('./'))
 		.pipe(gulp.dest('./build'))
 );
