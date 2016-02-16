@@ -40,6 +40,10 @@ export default function lazyReq(req, modules) {
 					throw new Error(`Invalid module type of ${mKey}`);
 				}
 
+				if (typeof mod === 'object' && 'default' in mod) {
+					mod = mod.default;
+				}
+
 				Object.defineProperty(ret, mKey, {
 					writable: false,
 					value: mod,
