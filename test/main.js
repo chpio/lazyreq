@@ -69,3 +69,16 @@ it('invalid require', () => {
 	assert.throws(() => ret.arrReqObj);
 	assert.throws(() => ret.obj);
 });
+
+it('default require', () => {
+	const ret = lazyReq(
+		() => {
+			return {default: 'str'};
+		},
+		{
+			wDefault: 'asdasd',
+		}
+	);
+
+	assert.equal(ret.wDefault, 'str');
+});
