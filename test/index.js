@@ -1,4 +1,4 @@
-import lazyReq from '../src/main';
+import lazyReq from '../src/index';
 import * as assert from 'assert';
 
 it('string require', () => {
