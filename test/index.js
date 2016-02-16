@@ -1,4 +1,4 @@
-import lazyReq from '../src/main';
+import lazyReq from '../src/index';
 import * as assert from 'assert';
 
 it('string require', () => {
@@ -68,4 +68,17 @@ it('invalid require', () => {
 	assert.throws(() => ret.arrObj);
 	assert.throws(() => ret.arrReqObj);
 	assert.throws(() => ret.obj);
+});
+
+it('default require', () => {
+	const ret = lazyReq(
+		() => {
+			return {default: 'str'};
+		},
+		{
+			wDefault: 'asdasd',
+		}
+	);
+
+	assert.equal(ret.wDefault, 'str');
 });

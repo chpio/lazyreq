@@ -10,7 +10,11 @@ $ npm i --save lazyreq
 ```javascript
 'use strict';
 
-var lazyReq = require('lazyreq');
+// es5
+var lazyReq = require('lazyreq').default;
+
+// es2015
+import lazyReq from 'lazyreq';
 
 var $ = lazyReq(require, { // pass the "require" function to lazyreq
 	newer: 'gulp-newer',

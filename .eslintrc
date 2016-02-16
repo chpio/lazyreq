@@ -1,1 +1,3 @@
 extends: sudeti
+rules:
+  max-len: [2, 100, 2]
