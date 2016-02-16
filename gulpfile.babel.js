@@ -1,4 +1,4 @@
-import qw from 'js-utils/qw';
+import {qw} from 'js-utils';
 import gulp from 'gulp';
 import lazyReq from 'lazyreq';
 
@@ -10,14 +10,18 @@ const $ = lazyReq(require, {
 	mocha: 'gulp-mocha',
 	istanbul: 'gulp-istanbul',
 	isparta: 'isparta',
+	sourcemaps: 'gulp-sourcemaps',
 });
 
 gulp.task('build', () =>
 	gulp.src('./src/**/*.js')
+		.pipe($.sourcemaps.init())
 		.pipe($.newer('./build'))
 		.pipe($.babel({
-			sourceMaps: 'inline',
+			babelrc: false,
+			presets: ['es2015'],
 		}))
+		.pipe($.sourcemaps.write('./'))
 		.pipe(gulp.dest('./build'))
 );
 
